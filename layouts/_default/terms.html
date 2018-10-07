@@ -1,0 +1,28 @@
+{{ partial "header.html" . }}
+<section id="post">
+  <div class="head">
+      <div class="avatar">
+          <a href="{{ .Site.BaseURL }}"><img src="{{ .Site.Params.avatar }}"></a>
+      </div>
+      <div class="title">{{ .Site.Params.tag }}</div>
+  </div>
+  
+  <div class="tags">
+   <ul>
+	  {{ $data := .Data }}
+	  {{ range $key, $value := .Data.Terms.ByCount }}
+		 {{ if ($value.Name) }}
+			<li>
+			   <a href="{{ $.Site.BaseURL }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
+				  {{ $value.Name | upper }} <span>({{ $value.Count }})</span>
+			   </a>
+
+			</li>
+		 {{ end }}
+	  {{ end }}
+	</ul>
+	</div>
+	
+</section>
+	
+{{ partial "footer.html" . }}

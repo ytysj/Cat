@@ -5,30 +5,21 @@
           <a href="{{ .Site.BaseURL }}"><img src="{{ .Site.Params.avatar }}"></a>
       </div>
       <div class="title">{{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Title }} {{ end }}</div>
-      <div class="tags">
-        {{ with .Params.tags }}
-        {{ if lt (len .) 2 }}
-          {{ range . }}
-            <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">{{ . }}</a>
-          {{ end }}
-        {{ else }}
-            <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">{{ . }}</a>
-        {{ end }}
-        {{ end }}
-      </div>
+	  <div class="subtitle">
+		<div class="date">{{ .Date.Format "2006年01月02日" }}</div>
+		<div class="tags">
+		{{ with .Params.tags }}
+		  {{ range . }}
+			<a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">{{ . }}</a>
+		  {{ end }}
+		{{ end }}
+		</div>
+	  </div>
   </div>
+  
   <div class="content">{{ .Content }}</div>
-  {{ if or (.PrevInSection) (.PrevInSection) }}
-  <ol class="page-navigator">
-    {{ if .PrevInSection }}
-      <li class="prev"><a href="{{ .PrevInSection.Permalink }}" title="{{ .PrevInSection.Title }}">Prev</a></li>
-    {{ end }}
-    {{ if .NextInSection }}
-      <li class="next"><a href="{{ .NextInSection.Permalink }}" title="{{ .NextInSection.Title }}">Next</a></li>
-    {{ end }}
-  </ol>
-  {{ end }}
-{{ if .Site.Params.comments.disqusShortname }}
+  
+{{ if .Site.Params.valine.enable }}
     {{ partial "comments.html" . }}
 {{ end }}
 </section>

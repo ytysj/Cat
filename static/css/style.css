@@ -1,19 +1,16 @@
-@font-face{font-family:'Gentium Book Basic';font-style:normal;font-weight:400;src:local('Gentium Book Basic'),local('Gentium Book Basic'),url(//fonts.gstatic.com/s/gentiumbookbasic/v8/pe0zMJCbPYBVokB1LHA9bbyaQb8ZGjc4XrF64aXU2Wc9.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:'Gentium Book Basic';font-style:normal;font-weight:400;src:local('Gentium Book Basic'),local('Gentium Book Basic'),url(//fonts.gstatic.com/s/gentiumbookbasic/v8/pe0zMJCbPYBVokB1LHA9bbyaQb8ZGjc4ULF64aXU2Q.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:Inconsolata;font-style:normal;font-weight:400;src:local('Inconsolata Regular'),local('Inconsolata-Regular'),url(//fonts.gstatic.com/s/inconsolata/v16/QldKNThLqRwH-OJ1UHjlKGlW5qhWxg.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+1EA0-1EF9,U+20AB}
-@font-face{font-family:Inconsolata;font-style:normal;font-weight:400;src:local('Inconsolata Regular'),local('Inconsolata-Regular'),url(//fonts.gstatic.com/s/inconsolata/v16/QldKNThLqRwH-OJ1UHjlKGlX5qhWxg.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:Inconsolata;font-style:normal;font-weight:400;src:local('Inconsolata Regular'),local('Inconsolata-Regular'),url(//fonts.gstatic.com/s/inconsolata/v16/QldKNThLqRwH-OJ1UHjlKGlZ5qg.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@import url('https://fonts.lug.ustc.edu.cn/css?family=Exo+2');
+
 *{box-sizing:border-box}
-.content{font:300 1em/1.62 Gentium Book Basic,sans-serif;color:#444443}
-.windows .content{font-size:16px;font-family:Georgia,SimSun,sans-serif}
+.content{font:'Exo 2','Microsoft YaHei Light',sans-serif;color:#444443}
+.windows .content{font-size:16px;font-family:'Exo 2','Microsoft YaHei Light',sans-serif}
 .content ::-moz-selection{background-color:rgba(0,0,0,.2)}
 .content ::selection{background-color:rgba(0,0,0,.2)}
 .content a{color:#111;word-wrap:break-word;text-decoration:none;border-bottom:1px solid #555}
 .content a:hover{color:#555;border-bottom:none}
-.content p{margin-top:0;margin-bottom:1.46em}
+.content p{margin-top:0;margin-bottom:1.46em;line-height:1.8em}
 .content h2,.content h3,.content h4,.content h5,.content h6{position:relative;margin:1em 0}
-.content h2:before,.content h3:before,.content h4:before,.content h5:before,.content h6:before{content:"#";color:#56626b;position:absolute;left:-.7em;top:-4px;font-size:1.2em;font-weight:700}
-.content h4:before,.content h5:before,.content h6:before{content:""}
+.content h2:before,.content h3:before,.content h4:before,.content h5:before,.content h6:before{color:#56626b;position:absolute;left:-.7em;top:-4px;font-size:1.2em;font-weight:700}
+.content h4:before,.content h5:before,.content h6:before{content:none}
 .content h2,.content h3{font-size:22px}
 .content h4,.content h5,.content h6{font-size:18px}
 @media screen and (max-width:700px){.wrap{width:100%}
@@ -54,14 +51,25 @@
 }
 .archive{max-width:500px;margin:auto}
 .archive h2:before{content:none}
-.archive ul{padding:2px 0 0 50px}
-.archive .post-time{float:left;width:100px;color:#7f8c8d}
-body{font-family:Gentium Book Basic,sans-serif}
+.archive ul{display:inline-block;padding:0 0 0 1em}
+.archive .post-item{padding:.5em 0 .5em 0}
+.archive .post-time{display: inline-block;color:#000;padding:0 1em 0 0}
+.archive .post-link {text-decoration:none;color: #555;transition: 0.3s ease-out}
+.archive .post-link:hover {font-weight:bold;text-decoration:underline;color: #000;padding:0.5em;}
+
+body{font-family:'Exo 2','Microsoft YaHei Light',sans-serif;background-color:#FAF9F5}
 div.main-container,div.post-container{width:100%;position:fixed;top:0;left:0;height:auto}
-section#main{text-align:center;max-width:760px;margin:0 auto}
-section#main .header img.avatar{display:inline-block;padding:4px;border:1px solid #eaeaea;width:100px;height:100px;margin:20px auto;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%}
-section#main .header .name{font-size:1.5em;margin:7px 0;color:#000;font-weight:400}
-section#main .header .description{color:#5E656B;font-size:14px;margin:5px 0}
+section#main{text-align:center;max-width:760px;margin:0 auto;padding:5px}
+
+section#main .head .avatar{text-align:center}
+section#main .head .avatar a{text-decoration:none}
+section#main .head .avatar img{width:100px;height:100px;border:1px solid #eaeaea;padding:4px;border-radius:50%;margin-top:20px;margin-bottom:40px}
+section#main .head .title{font-size:1.8em;margin:7px 0;color:#111;font-weight:400}
+section#main .head .description{color:#555;font-size:1em;margin:5px 0}
+
+section#main .menu a{text-decoration:none;color:#555;font-size:1em}
+section#main .menu a:hover{color:#111;text-decoration:underline}
+
 section#main nav{list-style:none}
 section#main nav li{display:inline-block;margin:0 5px}
 section#main nav li a{font-size:14px;text-decoration:none;color:#777}
@@ -71,8 +79,9 @@ section#main .posts .post{text-decoration:none;color:#444;display:block;padding:
 section#main .posts .post:hover{background-color:#f5f5f5;transition:background-color .25s}
 section#main .posts .post .labels{font-size:.8em;margin:5px 0}
 section#main .posts .post .labels .label{display:inline-block}
-section#main .posts .post .labels .label:before{content:"#";margin-left:5px}
+section#main .posts .post .labels .label:before{margin-left:5px}
 section#main .posts .post span{display:block;font-size:.8em;color:#999}
+
 footer{text-align:center;max-width:760px;margin:0 auto;color:#444;padding:70px 0 50px 0;font-size:14px}
 footer a{text-decoration:none;padding-bottom:1px;color:#444;border-bottom:1px solid #444}
 footer a:hover{color:#000;border-bottom:none}
@@ -86,24 +95,132 @@ section#post .head .avatar{text-align:center}
 section#post .head .avatar a{text-decoration:none}
 section#post .head .avatar img{width:100px;height:100px;border:1px solid #eaeaea;padding:4px;border-radius:50%;margin-top:20px;margin-bottom:40px}
 section#post .head .title{text-align:center;font-size:1.75em;margin:7px 0;color:#000;font-weight:300}
-section#post .head .tags{text-align:center}
-section#post .head .tags a{font-size:14px;text-decoration:none;color:#777;margin:0 5px}
-section#post .head .tags a:hover{color:#000}
-section#post .content{margin-top:50px;color:#000;min-height:400px;}
-section#comments{font-size:14px;max-width:760px;margin:0 auto}
-section#comments .comment-bar{margin-top:35px;text-align:center;font-size:1.25em;margin-bottom:15px}
-section#comments ol{list-style:none;padding:0}
-section#comments ol li{padding:10px 0 10px 15px}
-section#comments ol>li{margin-top:10px;background-color:#f8f8f8;border-radius:3px}
-section#comments ol li>img{float:right;width:40px;height:40px;border:1px solid #eaeaea;padding:4px;border-radius:50%;margin-right:10px}
-section#comments ol li .content .meta a{color:#444;text-decoration:none}
-section#comments ol li.comment-author .content .meta a{color:#4fc1e9}
-section#comments ol li .content .meta span{font-size:.75em;color:#999;margin-left:10px}
-section#comments ol li .content .meta span a:hover{color:#000}
-section#comments ol li .content .reply{display:inline-block}
-section#comments ol li .content .p{padding-top:5px}
-section#comments ol li .content .p p{margin:0;padding:0;line-height:1.62em}
-section#comments form input{width:100%;padding:10px 15px;outline:0;border:0;background-color:#f8f8f8;margin:5px 0;border-radius:3px;border:1px solid #eaeaea;font:inherit}
-section#comments form textarea{height:100px;width:100%;padding:10px 15px;outline:0;border:0;background-color:#f8f8f8;margin:5px 0;border-radius:3px;border:1px solid #eaeaea}
-section#comments form button{color:#fff;background:#56626b;width:100%;padding:10px 0;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;border:none;font:inherit;cursor:pointer}
-section#comments form button:hover{background:#404D56}
+section#post .head .subtitle{
+	text-align:center;
+	font-size:0.9em
+}
+section#post .head .date{
+	display:inline-block;
+	text-align:center;
+	text-decoration:none;
+	color:#777;
+	margin:0 5px;
+}
+section#post .tags ul{
+	display:inline-block;
+	padding:.5em 0 .5em 0；
+}
+section#post .tags li{
+	display:inline-block;
+	padding:0 .5em 0 .5em；
+}
+section#post .tags a {
+	text-decoration:none;
+	color:#555;
+}
+section#post .tags a:hover{
+	text-decoration:underline;
+	color:#111;
+}	
+section#post .content{
+	margin-top:50px;
+	color:#000;
+	min-height:400px;
+}
+
+
+section#comments {
+	font-size:14px;
+	max-width:760px;
+	margin:0 auto;
+}
+section#comments .comment-bar{
+	margin-top:35px;
+	text-align:center;
+	font-size:1.25em;
+	margin-bottom:15px;
+}	
+section#comments ol{
+	list-style:none;
+	padding:0;
+}
+section#comments ol li{
+	padding:10px 0 10px 15px;
+}	
+section#comments ol>li{
+	margin-top:10px;
+	background-color:#f8f8f8;
+	border-radius:3px;
+}	
+section#comments ol li>img{
+	float:right;
+	width:40px;
+	height:40px;
+	border:1px solid #eaeaea;
+	padding:4px;
+	border-radius:50%;
+	margin-right:10px;
+}	
+section#comments ol li .content .meta a{
+	color:#444;
+	text-decoration:none;
+}	
+section#comments ol li.comment-author .content .meta a{
+	color:#4fc1e9;
+}	
+section#comments ol li .content .meta span{
+	font-size:.75em;
+	color:#999;
+	margin-left:10px;
+}
+section#comments ol li .content .meta span a:hover{
+	color:#000;
+}
+section#comments ol li .content .reply{
+	display:inline-block;
+}
+section#comments ol li .content .p{
+	padding-top:5px;
+}
+section#comments ol li .content .p p{
+	margin:0;
+	padding:0;
+	line-height:1.62em;
+}
+section#comments form input{
+	width:100%;
+	padding:10px 15px;
+	outline:0;
+	border:0;
+	background-color:#f8f8f8;
+	margin:5px 0;
+	border-radius:3px;
+	border:1px solid #eaeaea;
+	font:inherit;
+}
+section#comments form textarea{
+	height:100px;
+	width:100%;
+	padding:10px 15px;
+	outline:0;
+	border:0;
+	background-color:#f8f8f8;
+	margin:5px 0;
+	border-radius:3px;
+	border:1px solid #eaeaea;
+}
+section#comments form button{
+	color:#fff;
+	background:#56626b;
+	width:100%;
+	padding:10px 0;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:none;
+	font:inherit;
+	cursor:pointer;
+}
+section#comments form button:hover{
+	background:#404D56;
+}

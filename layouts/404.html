@@ -1,1 +1,17 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Page Not Found</title><meta name="viewport" content="width=device-width, initial-scale=1"><style>@font-face{font-family:'Gentium Book Basic';font-style:normal;font-weight:400;src:local('Gentium Book Basic'),local('GentiumBookBasic'),url(//fonts.gstatic.com/s/gentiumbookbasic/v8/pe0zMJCbPYBVokB1LHA9bbyaQb8ZGjc4XrF64aXU2Wc9.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Gentium Book Basic';font-style:normal;font-weight:400;src:local('Gentium Book Basic'),local('GentiumBookBasic'),url(//fonts.gstatic.com/s/gentiumbookbasic/v8/pe0zMJCbPYBVokB1LHA9bbyaQb8ZGjc4ULF64aXU2Q.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}*{margin:0;line-height:1.5}html{color:#888;font-family:'Gentium Book Basic';text-align:center}body{left:50%;margin:-43px 0 0 -150px;position:absolute;top:50%;width:300px}h1{color:#555;font-size:2em;font-weight:400}p{line-height:1.2}@media only screen and (max-width:270px){body{margin:10px auto;position:static;width:95%}h1{font-size:1.5em}}a{font-size:14px;text-decoration:none;color:#777}a:hover{color:#555;border-bottom:0}</style></head><body><h1>Page Not Found</h1><p>Sorry, but the page you were trying to view does not exist.<br />Go <a href="{{ .Site.BaseURL }}">Home</a>.</p></body></html>
+{{ partial "header.html" . }}
+<section id="main">
+  <section class="head">
+      <div class="avatar">
+          <a href="{{ .Site.BaseURL }}"><img src="{{ .Site.Params.avatar }}"></a>
+      </div>
+      <div class="title">{{ .Site.Title }}</div>
+	  <div class="description">	{{ .Site.Params.description }} </div>
+  </section>
+<body>
+    <div class="post">
+		<h1>{{ with .Site.Params.title404 }}{{ . }}{{ else }}404 - Page not found{{ end }}</h1>
+		<h3>{{ with .Site.Params.subtitle404 }}{{ . }}{{ else }}The content you're looking for doesn't seem to exist.{{ end }}</h3>
+	</div>
+</body>
+</section>
+{{ partial "footer.html" . }}

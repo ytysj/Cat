@@ -2,7 +2,7 @@
   {{- $current := now.Format "2006" }}
   &copy;
   {{ if ne .Site.Params.since $current }}
-    {{ .Site.Params.since }} -
+    {{ .Site.Params.since }} 
   {{ end }}
   {{- $current }} <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>, powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/hoofs/Cat">Cat</a>.
 </footer>

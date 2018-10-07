@@ -1,9 +1,18 @@
 {{ partial "header.html" . }}
 <section id="main">
-  <section class="header">
-      <img src="{{ .Site.Params.avatar }}" alt="" class="avatar">
-      <div class="name">{{ .Site.Title }}</div>
-      <div class="description">{{ .Site.Params.description }}</div>
+  <section class="head">
+		<div class="avatar">
+		<a href="{{ .Site.BaseURL }}"><img src="{{ .Site.Params.avatar }}"></a>
+		</div>
+      <div class="title">{{ .Site.Title }}</div>
+	  <div class="description">	{{ .Site.Params.description }} </div>
+	  <div class="menu">
+		<a href='{{ .Site.BaseURL }}static/photo'>{{ with .Site.Params.photo }}{{ . }}{{ else }}光与影{{ end }}</a>
+		<a href='{{ .Site.BaseURL }}static/painting'>{{ with .Site.Params.painting }}{{ . }}{{ else }}无声诗{{ end }}</a>
+		<a href='{{ .Site.BaseURL }}post'>{{ with .Site.Params.archive }}{{ . }}{{ else }}归档{{ end }}</a>
+		<a href='{{ .Site.BaseURL }}tags'>{{ with .Site.Params.tag }}{{ . }}{{ else }}标签{{ end }}</a>
+		<a href='{{ .Site.BaseURL }}about'>{{ with .Site.Params.about }}{{ . }}{{ else }}关于{{ end }}</a>
+		</div>
       <nav>
           {{ range .Site.Menus.main }}
             <li><a href="{{ .URL }}">{{ .Name }}</a></li>
@@ -15,7 +24,7 @@
     <ul class=posts_listing>
       {{ range .Paginator.Pages }}
         <a class="post" href="{{ .Permalink }}">{{ .Title }}
-          <span>{{ .Date.Format (.Site.Params.dateform | default "January 02, 2006") }}</span>
+          <span>{{ .Date.Format (.Site.Params.dateform | default "2006年01月02日") }}</span>
         </a>
       {{ end }}
     </ul>
