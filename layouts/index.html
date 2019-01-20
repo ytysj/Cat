@@ -7,11 +7,26 @@
       <div class="title">{{ .Site.Title }}</div>
 	  <div class="description">	{{ .Site.Params.description }} </div>
 	  <div class="menu">
-		<a href='{{ .Site.BaseURL }}static/photo'>{{ with .Site.Params.photo }}{{ . }}{{ else }}光与影{{ end }}</a>
-		<a href='{{ .Site.BaseURL }}static/painting'>{{ with .Site.Params.painting }}{{ . }}{{ else }}无声诗{{ end }}</a>
-		<a href='{{ .Site.BaseURL }}post'>{{ with .Site.Params.archive }}{{ . }}{{ else }}归档{{ end }}</a>
-		<a href='{{ .Site.BaseURL }}tags'>{{ with .Site.Params.tag }}{{ . }}{{ else }}标签{{ end }}</a>
-		<a href='{{ .Site.BaseURL }}about'>{{ with .Site.Params.about }}{{ . }}{{ else }}关于{{ end }}</a>
+		<a href='{{ .Site.BaseURL }}static/photo'>
+			<i class="fa fa-camera-retro"></i>{{ with .Site.Params.photo }}{{ . }}{{ else }}光与影{{ end }}
+		</a>
+		
+		<a href='{{ .Site.BaseURL }}static/painting'>
+			<i class="fa fa-paint-brush"></i>{{ with .Site.Params.painting }}{{ . }}{{ else }}无声诗{{ end }}
+		</a>
+		
+		<a href='{{ .Site.BaseURL }}post'>
+			<i class="fa fa-archive"></i>{{ with .Site.Params.archive }}{{ . }}{{ else }}归档{{ end }}
+		</a>
+		
+		<a href='{{ .Site.BaseURL }}tags'>
+			<i class="fa fa-tags"></i>{{ with .Site.Params.tag }}{{ . }}{{ else }}标签{{ end }}
+		</a>
+		
+		<a href='{{ .Site.BaseURL }}about'>
+			<i class="fa fa-user-circle"></i>{{ with .Site.Params.about }}{{ . }}{{ else }}关于{{ end }}
+		</a>
+		
 		</div>
       <nav>
           {{ range .Site.Menus.main }}
