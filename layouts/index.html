@@ -23,6 +23,10 @@
 			<i class="fa fa-tags"></i>{{ with .Site.Params.tag }}{{ . }}{{ else }}标签{{ end }}
 		</a>
 		
+		<a href='{{ .Site.BaseURL }}games/i-fu-you/'>
+			<i class="fa fa-gamepad"></i>{{ with .Site.Params.game }}{{ . }}{{ else }}游戏{{ end }}
+		</a>
+		
 		<a href='{{ .Site.BaseURL }}about'>
 			<i class="fa fa-user-circle"></i>{{ with .Site.Params.about }}{{ . }}{{ else }}关于{{ end }}
 		</a>
